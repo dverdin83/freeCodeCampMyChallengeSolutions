@@ -1,0 +1,15 @@
+/* PSEUDOCODE
+1. Split the string into individual characters.
+2. Reverse characters.
+3. Join characters into string.
+5. Return string.
+*/
+function reverseString(str) {
+  var arrayOfCharacters = str.split('');
+  arrayOfCharacters = arrayOfCharacters.reverse();
+  str = arrayOfCharacters.join('');
+  
+  return str;
+}
+
+reverseString("hello");
