@@ -1,0 +1,19 @@
+/*PSEUDOCODE
+1. Pass argument into factorialize function.
+2.. Declare variable total and initialize to 1.
+3... Declare and initialize variable in a for loop which runs num + 1 times where num is the argument.
+4.... In the for loop multiply n by total.
+5.....Assign product of total and num to the variable total.
+6......After for loop is complete assign the value of total to variable num.
+7.......Return num.
+*/
+function factorialize(num) {
+  var total = 1;
+  for (n = 1; n < num + 1; n++) {
+    total = n * total;
+  }
+  num = total;
+  return num;
+}
+
+factorialize(5);
