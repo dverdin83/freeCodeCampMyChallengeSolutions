@@ -1,0 +1,25 @@
+/*PSEUDOCODE
+1. Pass string into titleCase function.
+2.. Make string all lower case to ensure all trailing letters are lowercase.
+3... Split string into an array sentenceArray
+4.... Run a for loop on each element of sentenceArray making first letter uppercase.
+5..... Join sentenceArray into a new string titleCaseString and return.
+*/
+function titleCase(str) {
+  var parsedSentence = str.toLowerCase();
+  console.log(parsedSentence);
+  var sentenceArray = parsedSentence.split(' ');
+  console.log(sentenceArray);
+  
+  for (i = 0; i < sentenceArray.length; i++) {
+    var firstLetter = sentenceArray[i].charAt(0);
+    firstLetter = firstLetter.toUpperCase();
+    console.log(firstLetter);
+    sentenceArray[i] =sentenceArray[i].replace(/\b\w/,firstLetter);
+    console.log(sentenceArray[i]);
+  }
+  
+  return sentenceArray.join(' ');
+}
+
+titleCase("I'm a little tea pot");
