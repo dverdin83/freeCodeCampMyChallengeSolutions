@@ -1,0 +1,28 @@
+/* PSEUDOCODE
+1. Pass multidimensional array with 4 sub-arrays into largestOfFour function.
+2.. Put first sub array in a for loop and find the highest number use nested loop.
+3....Assign highest number of first sub array to array highestNumbers.
+4.....Loop Subsequent sub arrays repeating steps 2 and 3 use nested loop
+5. return 4 highest numbers with highestNumbers array.
+*/
+function largestOfFour(arr) {
+  var numbersMultiArray = arr;
+  var highestNumbersArray = [];
+  var highestNumber = 0;
+  var j = 0;
+  var i = 0;
+  for (i = 0; i < numbersMultiArray.length; i++) {
+        for (j = 0; j < numbersMultiArray[i].length; j++) {
+          
+          if (numbersMultiArray[i][j] > highestNumber) {
+            highestNumber = numbersMultiArray[i][j];
+          }
+        }
+        highestNumbersArray.push(highestNumber);
+    highestNumber = 0;
+  }
+  console.log(highestNumbersArray);
+  return highestNumbersArray;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
