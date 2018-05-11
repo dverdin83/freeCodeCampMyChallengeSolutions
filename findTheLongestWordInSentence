@@ -1,0 +1,21 @@
+/* PSEUDOCODE
+1. Pass argument into findLongestWord function.
+2.. Split words in string into an array named sentenceArray.
+3... Compare word lengths using a for loop.
+4.... Return length of longest string in sentenceArray.
+*/
+function findLongestWord(str) {
+  var sentenceArray = str.split(' ');
+
+  var longestWord = 0;
+  console.log(sentenceArray);
+  for (i = 0;i < sentenceArray.length; i++) {
+    if (sentenceArray[i].length > longestWord) {
+      longestWord = sentenceArray[i].length;
+      console.log(longestWord);
+  }
+  }
+  return longestWord;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
