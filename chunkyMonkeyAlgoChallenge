@@ -1,0 +1,19 @@
+/*PSEUDOCODE
+1. Pass arguments arr and size into function chunkArrayInGroups.
+2. Slice arr into chunks with length of size argument.
+2a. Make chunks with a for loop running the length of arr.
+3. Push chunks into array twoDimensional and return.
+*/
+function chunkArrayInGroups(arr, size) {
+  //console.log(arr.slice(0, size));
+  var twoDimensionalArray = [];
+  for (i = 0; i < arr.length;i+=size) {
+    console.log(arr.slice(i,i+size));
+    twoDimensionalArray.push(arr.slice(i,i+size));
+  }
+  console.log(twoDimensionalArray);
+  // Break it up.
+  return twoDimensionalArray;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
