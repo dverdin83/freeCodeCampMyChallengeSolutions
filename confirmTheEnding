@@ -1,0 +1,23 @@
+Confirm the Ending
+/* PSEUDOCODE 
+1. Pass str and target into function confirmEnding.
+2.. Split target into subStringArray.
+3...Find length of target by assigning length of subStringArray into subStringLength.
+4....From end of string to length of target confirm target is at string end.
+5.....If true return true if false return false.
+*/
+function confirmEnding(str, target) {
+  //var subStringArray = target.split(''); **alernative code**
+  //console.log(subStringArray);
+  //var subStringLength = subStringArray.length;
+  //console.log(subStringLength);
+  var subStringLength = target.length;
+  console.log(subStringLength);
+  console.log(str.substring(str.length - target.length));
+  
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  return  (target === str.substring(str.length - target.length) );
+}
+
+confirmEnding("Bastian", "n");
