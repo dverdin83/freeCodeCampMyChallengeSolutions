@@ -1,0 +1,12 @@
+/*PSEUDOCODE
+1. Pass arguments arr and howMany into function slasher.
+2. Slice elements off of beggining of arr using vale in howMany.
+3. Return result.
+*/
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  console.log(howMany);
+  return arr.slice(howMany);
+}
+
+slasher([1, 2, 3], 2);
