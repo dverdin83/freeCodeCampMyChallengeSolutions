@@ -1,0 +1,17 @@
+/* PSEUDOCODE
+1. Pass arguments str and num into function reoeatStringNumTimes.
+2.. If num is a negative number return an empty string.
+3... Start a for loop that runs num times.
+4....In the for loop concact string.
+5.... Or just use string.repeat??
+
+*/
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  if (num <= 0) {
+    return '';
+  }
+  return str.repeat(num);
+}
+
+repeatStringNumTimes("abc", 3);
