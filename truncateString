@@ -1,0 +1,21 @@
+/*PSEUDOCODE
+1. Pass arguments str and num into truncateString function.
+2. If num is < or = to 3 return truncate string if length longer than num and add '...'
+3. If num > 3 and str length longer than num truncate and add ... if room for ... without going over limit and return result.
+*/
+function truncateString(str, num) {
+  if (num <= 3 && str.length > num) {
+    console.log(str.slice(0, num) + '...');
+    return str.slice(0, num) + '...';
+  }
+  else if (num > 3 && str.length > num) {
+    console.log(str.slice(0,num- 3 )+'...'.slice(0, num));
+    return str.slice(0,num - 3)+'...'.slice(0, num);
+  }
+  
+  
+  // Clear out that junk in your trunk
+  return str;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
