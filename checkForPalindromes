@@ -1,0 +1,33 @@
+/*PSEUDOCODE
+1. Pass string argument into palindrome function.
+2.. Make String all lower case.
+3... Remove punctuation, spaces, and symbols from string.
+4.... Check to see if string is strictly equivalent in reverse.
+4a.... If string is strictly equivalent in reverse return true.
+4b.... If string is not strictly equivalent in reverse return false.
+*/
+function palindrome(str) {
+  var parsedString = str.toLowerCase();
+  console.log(parsedString);
+  var parsedStringArray = parsedString.match(/[a-z0-9]/g);
+  console.log(parsedStringArray);
+  if (parsedStringArray === null) {
+    return true;
+  }
+  for (i=0;i < parsedStringArray.length; i++) {
+    if (parsedStringArray[i] === parsedStringArray[parsedStringArray.length - i - 1]) {
+    
+    }
+    else {
+      console.log(parsedStringArray[i]);
+      return false;
+    }
+  
+  }
+  return true;
+ 
+}
+
+
+
+palindrome("eye");
