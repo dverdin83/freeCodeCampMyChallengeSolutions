@@ -1,0 +1,32 @@
+/* PSEUDOCODE
+1. Declare function filterList and destroyer.
+2. Pass arguments arr into destroyer function.
+3. Split first argument from remaining arguments assign to variable firstArray;
+4.. In destroyer function filter all arguments preceding the first array argument out by calling function filterList passing arguments from destroyer into filterList.
+5.. Return filtered array.
+*/
+var firstArray = [];
+var targetNumbers = [];
+
+function  filterList(args) {
+console.log(arguments); 
+  for (i = 0; i < targetNumbers.length; i++) {
+    if (args == targetNumbers[i]) {
+      return '';
+    }
+  }
+  return args;
+}
+function destroyer(arr) {
+  console.log('Initial Argument: ' + arr);
+  firstArray = arguments[0];
+  targetNumbers = Array.from(arguments);
+  targetNumbers = targetNumbers.slice(1);
+  console.log('Target Numbers: ' + targetNumbers);
+  console.log('First Array: ' + firstArray);
+  console.log(firstArray.filter(filterList));
+  var result = firstArray.filter(filterList);
+  return result;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
