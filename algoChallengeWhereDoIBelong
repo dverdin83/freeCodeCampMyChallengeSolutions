@@ -1,0 +1,32 @@
+/* PSEUDOCODE
+1. Pass arguments array arr and number num into function getIndexToIns.
+2. Sort array arr into ascending order using sort method with comparreTo function.
+3. Assign sorted array to variable sortedArray.
+4. Using a for loop compare sortedArray to argument num and return index i where index i of num contains an element with a value less than or equal to sortedArrays index i.
+*/
+function getIndexToIns(arr, num) {
+  console.log('Initial Argument arr: ');
+  console.log(arr);
+  console.log('Initial Argument num: ');
+  console.log(num);
+  
+  var sortedArray = arr.sort(function(a,b) {
+    return a - b;
+  });
+  console.log('Sorted Array: ');
+  console.log(sortedArray);
+  
+  for (i = 0; i < sortedArray.length; i++) {
+    if (num > sortedArray[sortedArray.length-1]) {
+      return sortedArray.length;
+    }
+    else if (num <= sortedArray[i]) {
+      console.log(i);
+      return i;
+    }
+ 
+  }
+  // Find my place in this sorted array.
+}
+
+getIndexToIns([40, 60], 50);
