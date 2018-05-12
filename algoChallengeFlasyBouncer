@@ -1,0 +1,19 @@
+/* PSEUDOCODE
+1. Create callback function isTrue.
+2. Pass array arr into function bouncer.
+3. Filter all falsy values out of array by calling back isTrue.
+4. Return filtered array.
+*/
+function isTrue(value) {
+  return (value);
+}
+
+function bouncer(arr) {
+  
+  // Don't show a false ID to this bouncer.
+  var result = arr.filter(isTrue);
+  console.log(result);
+  return result ;
+}
+
+bouncer([7, "ate", "", false, 9]);
