@@ -1,0 +1,28 @@
+/*PSEUDOCODE
+1. Pass argument array arr into function mutation.
+2. Declare variable array and assign value of array arr.
+3. Set strings in array arr to lower case using a loop on each string element.
+4. Compare each character from first element in array to second element.
+5. If all characters in second element are present in the first element return true.
+6. If all characters in second element are not present in first element return          false.
+*/
+function mutation(arr) {
+  var array = arr;
+  var count = 0;
+  console.log('Original Argument Array: ' + arr);
+  for (arrElem = 0; arrElem < array.length; arrElem++) {
+    array[arrElem] = array[arrElem].toLowerCase();
+  }
+  console.log(array);
+  for (secArrElemC = 0; secArrElemC < array[1].length; secArrElemC++) {
+    console.log(array[0].indexOf(array[1].charAt(secArrElemC)));
+    if (array[0].indexOf(array[1].charAt(secArrElemC)) < 0) {
+      return false;
+    }
+  }
+  
+  
+  return true;
+}
+
+mutation(["hello", "hey"]);
