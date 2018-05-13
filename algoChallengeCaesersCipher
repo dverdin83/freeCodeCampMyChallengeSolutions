@@ -1,0 +1,48 @@
+/* PSEUDOCODE
+1. Pass string argument str into function rot13.
+2. Run a for loop starting to make key array Going from N to Z then A to M.
+2. Run a for loop which runs i times where i is the character length of str.
+3. Within for loop check each character if it is A-Z or a-z shift 13 letters 
+*/
+function rot13(str) { // LBH QVQ VG!
+  var aUp = 'A'.charCodeAt(); // 65 
+  var zUp = 'Z'.charCodeAt(); // 90
+  var aLow = 'a'.charCodeAt(); // 97
+  var zLow = 'z'.charCodeAt(); // 122
+  
+  var keyArray =[];
+  var stringArray = [];
+  var solutionArray = [];
+  var solution ='';
+  
+  for (i='N'.charCodeAt(); i <= 'Z'.charCodeAt(); i++) {
+    x = String.fromCharCode(i);
+    keyArray.push(x);
+  }
+  for (i='A'.charCodeAt(); i <= 'M'.charCodeAt();i++) {
+    x =String.fromCharCode(i);
+    keyArray.push(x);
+  }
+  console.log(keyArray);
+  
+  stringArray = str.split('');
+  console.log(stringArray);
+  
+  for (i = 0; i < stringArray.length; i++) {
+    
+      if (stringArray[i].charCodeAt() > 64 && stringArray[i].charCodeAt() < 91)
+      solutionArray.push(keyArray[stringArray[i].charCodeAt()-65]);
+      else {
+      solutionArray.push(stringArray[i]);
+      }
+    
+    
+  }
+  console.log(solutionArray.join(''));
+  
+  solution = solutionArray.join('');
+  return solution ;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
