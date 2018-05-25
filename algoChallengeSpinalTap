@@ -1,0 +1,18 @@
+/* Intermediate Algorithm Challenge SPINALTAPCASE
+*Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+*/
+/*PSEUDOCODE
+1. Pass string argument str into function function spinalCase.
+2. Using a regexp expression /\/S/g regexp should check for space globally escape required and replace spaces with a dash "-".
+3. Convert to lowercase.
+4. Return modified string.
+*/
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+ var parsedString = str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[\s_]/g,"-");
+  
+  return parsedString.toLowerCase();
+}
+
+spinalCase('This Is Spinal Tap');
