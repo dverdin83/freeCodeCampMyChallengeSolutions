@@ -1,0 +1,81 @@
+×
+DNA Pairing
+/* DNA Pairing Intermediate Algo Challege
+*The DNA strand is missing the pairing element. Take each character, get its pair, and return *the results as a 2d array.
+*
+*Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+*
+*Return the provided character as the first element in each array.
+*
+*For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
+*
+*The character and its pair are paired up in an array, and all the arrays are grouped into one *encapsulating array.
+*/
+
+/*PSEUDOCODE
+1. Pass string variable str into function pairElement.
+2. Define array variable orphanElements and initialize with value of split str no spaces.
+3. Define array matchedPairs;
+3. Define and initialize function makePairs to pair As with T and Gs with C.
+4. Declare a for loop iterate over orphanElements array and pass elements into function make pairs.
+5. In the for loop push returned pairs into array matchedPairs.
+6. return matchedPairs.
+*/
+
+  function makePairs(arr) {
+
+    
+
+  var oneMatchedPair= [];
+  var orphanElement = arr;
+    console.log(arr);
+  console.log(orphanElement);
+  oneMatchedPair.push(orphanElement);
+  //console.log(oneMatchedPair);
+  if (orphanElement.match(/[A]/)) {
+    oneMatchedPair.push("T");
+    console.log(oneMatchedPair);
+    return oneMatchedPair;
+  }
+  else if (orphanElement.match(/[T]/)) {
+    oneMatchedPair.push("A");
+    console.log(oneMatchedPair);
+    return oneMatchedPair;
+  }
+  else if (orphanElement.match(/[G]/)) {
+    oneMatchedPair.push("C");
+    console.log(oneMatchedPair);
+    return oneMatchedPair;
+  }
+  else if (orphanElement.match(/[C]/)) {
+    oneMatchedPair.push("G");
+    console.log(oneMatchedPair);
+    return oneMatchedPair;
+  }
+ }
+
+
+function pairElement(str) {
+  //var orphanElements = str.split("");
+  var matchedPairs = [];
+  var orphanElements= [];
+  var oneMatchedPair = [];
+  
+  orphanElements = str.split("");
+  console.log(str.split(""));
+  for (i = 0; i < str.length; i++) {
+  
+    oneMatchedPair = makePairs(orphanElements[i]);
+    console.log(orphanElements);
+    
+    matchedPairs.push(makePairs(orphanElements[i]));
+    console.log(matchedPairs);
+  }
+    console.log(matchedPairs);
+
+return matchedPairs;  
+}
+  
+
+
+pairElement("GCG");
