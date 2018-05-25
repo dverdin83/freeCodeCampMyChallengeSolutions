@@ -1,0 +1,23 @@
+Boo who
+/* Intermediate Algo Challenge Boo who
+*Check if a value is classified as a boolean primitive. Return true or false.
+*
+*Boolean primitives are true and false.
+*/
+
+/*PSEUDOCODE
+1. Pass argument bool into function booWho.
+2. Check if argument bool is equal to true or false return true if so.
+3. If argument bool is not equal to any of the above return true.
+
+*/
+function booWho(bool) {
+  if (Number.isInteger(bool)) {
+    return false;
+  }
+if (bool == false || bool == true) {
+    return true;
+    }
+  return false;
+}
+booWho(null);
