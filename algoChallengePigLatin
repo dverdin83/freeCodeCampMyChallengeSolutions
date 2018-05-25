@@ -1,0 +1,80 @@
+×
+Pig Latin
+/* PIG LATIN ALGO CHALLENGE
+*Translate the provided string to pig latin.
+*
+*Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the *word and suffixes an "ay".
+*
+*If a word begins with a vowel you just add "way" to the end.
+*
+*Input strings are guaranteed to be English words in all lowercase.
+*/
+
+/*PSEUDOCODE
+1. Pass variable str into translatePigLatinFunction
+2. Declare and initialize regexp object which checks for regexpCheckVowels (case insensitive).
+3. Declare variable pigLatinSuffix.
+4. Declare variable subStringRemainingString.
+5. Declare and initialize variable firstLetter assign value of first character of str.
+5. Declare variable solution.
+6. Using regexpCheckVowels, check if the first letter in str is a vowel.
+7a. If first letter of string is a vowel assign pigLatinSuffix string value of "way". 
+7b. If first letter is not a vowel assign subStringRemainingString value of subtring of str starting with index [1] and assign to pigLatinSuffix a value of firstLetter + "ay".
+8. Assign to solution subStringRemainingString + pigLatinSuffix..
+9. Return solution.
+
+*/
+function translatePigLatin(str) {
+ var regExp = /[aeiou]/i;
+  var pigLatinSuffix = "";
+  var subStringRemainingString = "";
+  var firstLetter = str.substr(0,1);
+  var secondLetter = str.substr(1,1);
+  console.log(secondLetter);
+  var secondIsVowel;
+  console.log(firstLetter);
+  var solution;
+  console.log(str);
+  console.log(regExp);
+  console.log(regExp.test(firstLetter));
+  
+  if (firstLetter.match(regExp)) {
+    console.log(firstLetter.match(regExp));
+    pigLatinSuffix = "way";
+    solution = str+pigLatinSuffix;
+    console.log(solution);
+    return solution;
+  }
+  
+  if (secondLetter.match(regExp)) {    
+    subStringRemainingString = str.substr(1);
+    console.log(subStringRemainingString);
+    pigLatinSuffix = firstLetter + "ay";
+    console.log(pigLatinSuffix);
+    solution = subStringRemainingString + pigLatinSuffix;
+    console.log(solution);
+    secondIsVowel = true;
+    return solution;
+    
+  }
+  else {
+    secondIsVowel = false;
+  }
+  if (secondIsVowel) {
+
+  }
+  else {
+    subStringRemainingString = str.substr(2);
+    solution = subStringRemainingString + firstLetter + secondLetter + "ay";
+    return solution;
+  }
+  
+  
+  
+
+  
+ 
+  
+}
+
+translatePigLatin("consonant");
