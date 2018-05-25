@@ -1,0 +1,18 @@
+/* Intermediate Algo Challenge
+*Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their *corresponding HTML entities.
+*/
+
+/* PSEUDOCODE
+1. Pass argument str into convertHTML function.
+2. Use provided variable string = str.text.
+3. Use replace and reg exps to replace character entities &, <, >, ", ' in their html entity code.
+4. Return string.
+*/
+function convertHTML(str) {
+  var string = str;
+  string = string.replace(/\&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
+  console.log(string);// &colon;&rpar;
+  return string;
+}
+
+convertHTML("Dolce & Gabbana");
