@@ -1,0 +1,30 @@
+Missing letters
+/* Intermediate Algo Challenge MISSING LETTERS
+*Find the missing letter in the passed letter range and return it.
+*
+*If all letters are present in the range, return undefined.
+*/
+
+/* PSEUDOCODE
+1. Pass argument str into function fearNotLetter.
+2. Declare variable missing letter.
+3. Run a for loop that iterates over the length of str - 1.
+4. Each loop checks for if the character at index i is one int greater than index i+1.
+5. If not equal return character using character code i+1.
+6. If the loop finishes without finding unequal comparisons return undefined.
+
+*/
+function fearNotLetter(str) {
+  for (i=0; i < str.length-1; i++ ) {
+       if (str.charCodeAt(i) + 1 != str.charCodeAt(i+1)){
+         
+         return String.fromCharCode(str.charCodeAt(i)+1);
+         
+       }
+    
+       }
+  return undefined;
+  
+}
+
+fearNotLetter("abce");
