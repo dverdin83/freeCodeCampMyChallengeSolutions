@@ -1,0 +1,14 @@
+function sumAll(arr) {
+  var sumAllInRange = 0;
+  var array = arr;
+  console.log(Math.min.apply(null, arr));
+  console.log(Math.max.apply(null, arr));
+  console.log(arr);
+  for (i = Math.min.apply(null, arr); i <= Math.max.apply(null, arr); i++) {
+    sumAllInRange += i;
+  }
+  console.log(sumAllInRange);
+  return sumAllInRange;
+}
+
+sumAll([1, 4]);
