@@ -1,0 +1,22 @@
+function myReplace(str, before, after) {
+  var solution;
+  var modifiedAfter;
+  var beforeFirstLetter = before.charAt(0);
+  var afterFirstLetter = after.charAt(0);
+
+ if (/[A-Z]/.test(beforeFirstLetter) && /[a-z]/.test(afterFirstLetter)) {
+   afterFirstLetter = afterFirstLetter.toUpperCase();
+   modifiedAfter = after.replace(after.charAt(0), afterFirstLetter);
+   solution = str.replace(before, modifiedAfter);
+   return solution;
+   }
+  else {
+    
+  
+  solution = str.replace(before, after);
+  return solution;
+}
+  }
+  
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped")
