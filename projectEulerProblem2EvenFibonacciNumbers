@@ -16,22 +16,25 @@ However, that doesn't seem to work either because you still have to find each fi
 
 Technically the first fib to calculate is 0 so we initialize to that but the for loop iterator will start with 1 as it would be the "nextFib".
 
-Well quite a few of distractions but going back to my original inclination to modify the incramentor seems to have done the trick. I put a boiler plate ++ incramentor before and went down a rabbit hole unit testing irrelevant code. The condition in the if statement is testing for i now as well.
-NEEDS MAJOR REVISIONS TO LOGIC IN CODE AND PSEUDOCODE
+Well quite a few of distractions but going back to my original inclination to modify the incramentor seems to have done the trick. I put a boiler plate ++ incramentor before and went down a rabbit hole unit testing irrelevant code.
+MRevisions to logic, pseudocode made, variables added.
 */
 /* PSEUDOCODE
 1. Pass integer argument n into function fiboEvenSum. (use strict javascript mode).
 2.. Inside the fiboEvenSum function, declare and initialize variable fiboEvenSumTotal equal to 0.
-3.. Inside the fibEvenSum function, declare and initialize integer variable nextFib = 0;
-4.. Declare a loop initializing iterator varialbe i equal to 1 that incraments by i + nextFib till reaching argument n.
-5... Inside the for loop, assign nextFib + i to integer variable nextFib.
-6... Inside the for loop, declare an if statement testing that executes if i is an even number using modulo 2.
-6a... If nextFib variable is even, add nextFib to fibEvenSumTotal integer variable.
-6b... If i is not even, continue to next interation of for loop.
-7.. When for loop completes execution, return integer variable fibEvenSumTotal.
+3.. Inside the fibEvenSum function, declare and initialize integer variable nextNumber = 1;
+4.. Inside the fibEvenSum function, declare and initialize integer variable previousNumber = 0;
+5.. Inside the fibEvenSum function, declasre and initialize integer variable currentFib = 0;
+4.. Declare a loop initializing iterator varialbe i equal to 0 that incraments till reaching value less than or equal to argument n.
+5... Inside the for loop, assign value of the sum of previousNumber and nextNumber to variable currentFib.
+6... Inside the for loop, assign value of nextNumber to previousNumber.
+7... Inside the for loop, assign value of nextNumber to currentFib.
+8a.. If nextFib variable is even, add nextFib to fibEvenSumTotal integer variable.
+8b.. If i is not even, continue to next interation of for loop.
+9.. When for loop completes execution, return integer variable fibEvenSumTotal.
 */
 
-
+"use strict";
 
 function fiboEvenSum(n) {
 let fibEvenSumTotal = 0;
@@ -56,7 +59,7 @@ console.log(fibEvenSumTotal);
 return fibEvenSumTotal;
 }
 
-fiboEvenSum(10);
 
-/*Solution BUT PSEUDOCODE NEEDS TOTAL REWORK GOTTA GO DO SOMETHING FOR MY FAM NOW THO! Had got it halfway right with a clever incramentor but broke it down into simpler steps and included more variables.
+//Solution
+
 */
