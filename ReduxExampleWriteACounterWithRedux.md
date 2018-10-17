@@ -44,4 +44,4 @@ const decAction = () => {
 };
 // define the Redux store here, passing in your reducers
 const store = Redux.createStore(counterReducer); 
-...
+
